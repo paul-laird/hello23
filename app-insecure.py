@@ -44,4 +44,5 @@ def hello(): # Name of the method
   )
   return ret #Return the data in a string format
 if __name__ == "__main__":
+  print("Example change!")
   app.run(host='0.0.0.0',port='8080') #Run the flask app at port 8080
