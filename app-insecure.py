@@ -35,6 +35,14 @@ def delete(): # Name of the method
     mimetype='application/json'
   )
   return ret #Return the data in a string format
+def test(): # Name of the method
+  response={'Results':'Success','Message':'Test Succesful!'}
+  ret=app.response_class(
+    response=json.dumps(response),
+    status=204,
+    mimetype='application/json'
+  )
+  return ret #Return the data in a string format
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.connection.cursor() #create a connection to the SQL instance
