@@ -24,6 +24,17 @@ def add():
   mysql.connection.commit()
 
   return '{"Result":"Success"}'
+@app.route("/delete") #Default - Show Data
+def delete(): # Name of the method
+  cur = mysql.connection.cursor() #create a connection to the SQL instance
+  #cur.execute('''SELECT * FROM students''') # execute an SQL statment
+  response={'Results':'Error','Message':'Not Implemented Yet!'}
+  ret=app.response_class(
+    response=json.dumps(response),
+    status=404,
+    mimetype='application/json'
+  )
+  return ret #Return the data in a string format
 @app.route("/") #Default - Show Data
 def hello(): # Name of the method
   cur = mysql.connection.cursor() #create a connection to the SQL instance
