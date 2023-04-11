@@ -35,6 +35,7 @@ def delete(): # Name of the method
     mimetype='application/json'
   )
   return ret #Return the data in a string format
+@app.route("/test") #Default - Show Data
 def test(): # Name of the method
   response={'Results':'Success','Message':'Test Succesful!'}
   ret=app.response_class(
